@@ -7,6 +7,7 @@ export default {
         width: '300px',
         backgroundColor: '#FFFFFF',
         location: 'right',
+        padding: '0',
 
         closeButton: {
             top: '50px',
