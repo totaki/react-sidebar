@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar Should renders without problems 1`] = `
+<Blocker
+  onClick={[Function]}
+>
+  <Panel
+    onClick={[Function]}
+  >
+    <CloseButton
+      onClick={[Function]}
+    >
+      Close
+    </CloseButton>
+  </Panel>
+</Blocker>
+`;
