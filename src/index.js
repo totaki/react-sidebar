@@ -1,9 +1,6 @@
-import React, {Component} from 'react'
+import Sidebar from './components/Sidebar';
+import * as THEMES from './theme';
 
-export default class extends Component {
-  render() {
-    return <div>
-      <h2>Welcome to React components</h2>
-    </div>
-  }
-}
+export { THEMES };
+
+export default Sidebar;
