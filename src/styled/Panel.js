@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import { getThemeAsPlainTextByKeys } from '../utils';
 import defaultTheme from '../theme/defaultTheme';
 
-function getPositionByLocation(position) {
-    switch(position) {
+function getPositionByLocation(location) {
+    switch(location) {
         case 'left':
             return `
                 top: 0;

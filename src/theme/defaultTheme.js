@@ -6,6 +6,7 @@ export default {
     panel: {
         width: '300px',
         backgroundColor: '#FFFFFF',
+        location: 'right',
 
         closeButton: {
             top: '50px',
