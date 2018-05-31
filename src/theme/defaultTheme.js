@@ -5,6 +5,12 @@ export default {
 
     panel: {
         width: '300px',
-        backgroundColor: '#FFFFFF'
+        backgroundColor: '#FFFFFF',
+
+        closeButton: {
+            top: '50px',
+            right: '50px',
+            border: '1px solid black'
+        }
     }
 }

@@ -24,7 +24,7 @@ function getPositionByLocation(position) {
 const Elem = styled.div`
     position: absolute;
     width: ${props => props.width};
-    background-color: ${props => props.backgroundColor};
+    background-color: ${props => props.backgroundColor}
 
     ${props => getPositionByLocation(props.location)}
 `;

@@ -4,21 +4,20 @@ import styled from 'styled-components';
 
 import Blocker from '../styled/Blocker';
 import Panel from '../styled/Panel';
+import CloseButton from '../styled/CloseButton';
 
 class Sidebar extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            active: this.props.active ? this.props.active : true 
-        }
-
-        console.log(this.state);
+            active: this.props.active 
+        };
 
         this.closeSidebar = this.closeSidebar.bind(this);
     }
 
-    closeSidebar() {
+    closeSidebar(e) {
         this.setState({ ...this.state, active: false });
     }
 
@@ -28,12 +27,12 @@ class Sidebar extends Component {
         if (active) {
             return (
                 <Blocker onClick={this.closeSidebar}>
-                    <Panel onClick={e => e.preventDefault()}>
-                        <button onClick={this.closeSidebar}>Close</button>
+                    <Panel onClick={e => e.stopPropagation()}>
+                        <CloseButton onClick={this.closeSidebar}>Close</CloseButton>
                         {this.props.children}
                     </Panel>
                 </Blocker>
-            )
+            );
         } else {
             return (null);
         }
@@ -42,6 +41,10 @@ class Sidebar extends Component {
 
 Sidebar.propTypes = {
     active: PropTypes.bool
-}
+};
+
+Sidebar.defaultProps = {
+    active: false
+};
 
 export default Sidebar;
