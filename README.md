@@ -6,7 +6,7 @@
 
 # Avatar
 
-It can display sidebar width children as content.
+It can display sidebar with children as content.
 
 ## Usage
 
@@ -14,13 +14,20 @@ It can display sidebar width children as content.
 
 import Sidebar from "@crpt/react-sidebar";
 
-<Sidebar location="left">content</Sidebar>
+...
+onSidebarClose() {
+    this.setState({ sidebarActive: false });
+}
+...
+<Sidebar active={this.state.sidebarActive} onClose={this.onSidebarClose}>content</Sidebar>
+...
 
 ```
 
 | PropName | Description | Example |
 |---|---|---|
-| location: String | Sidebar location. Can be 'left' or 'right'. Default is 'right'. | <Sidebar location="left" /> |
+| active: Boolean | Sidebar activity. Is Required | <Sidebar active={true} .../> |
+| onClose: Function | Callback for change container state if blocker clicked. | <Sidebar onClose={onClose} .../> |
 
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
