@@ -26,8 +26,8 @@ onSidebarClose() {
 
 | PropName | Description | Example |
 |---|---|---|
-| active: Boolean | Sidebar activity. Is Required | <Sidebar active={true} .../> |
-| onClose: Function | Callback for change container state if blocker clicked. | <Sidebar onClose={onClose} .../> |
+| active: Boolean | Sidebar activity. Is Required. | <Sidebar active={true} .../> |
+| onClose: Function | Callback for change container state if blocker clicked. Is Required. | <Sidebar onClose={onClose} .../> |
 
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
