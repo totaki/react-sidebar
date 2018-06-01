@@ -19,7 +19,7 @@ class Sidebar extends Component {
 
             return (
                 <Wrapper>
-                    <Blocker onClick={this.props.onClose} onTouchMove={e => e.preventDefault()}/>
+                    <Blocker onClick={this.props.onClose}/>
                     <Panel>
                         {this.props.children}
                     </Panel>

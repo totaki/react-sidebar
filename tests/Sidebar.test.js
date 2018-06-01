@@ -2,20 +2,14 @@ import React from 'react';
 import Sidebar from '../src/';
 
 describe('Sidebar', () => {
-    it('Should not renders by default', () => {
-        const sidebar = shallow(<Sidebar />);
-        
-        expect(sidebar).toMatchSnapshot();
-    });
-
     it('Should renders if active', () => {
-        const sidebar = shallow(<Sidebar active={true}/>);
+        const sidebar = shallow(<Sidebar active={true} onClose={e => (undefined)}/>);
 
         expect(sidebar).toMatchSnapshot();
     });
 
     it('Should not renders if not active', () => {
-        const sidebar = shallow(<Sidebar active={false}/>);
+        const sidebar = shallow(<Sidebar active={false} onClose={e => (undefined)}/>);
 
         expect(sidebar).toMatchSnapshot();
     });
