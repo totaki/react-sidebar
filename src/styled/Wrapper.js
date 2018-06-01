@@ -5,20 +5,20 @@ import { getThemeAsPlainTextByKeys } from '../utils';
 import defaultTheme from '../theme/defaultTheme';
 
 const Elem = styled.div`
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: ${props => props.backgroundColor}
+    z-index: ${props => props.zIndex}
 `;
 
-const Blocker = props => {
+const Panel = props => {
     const theme = getThemeAsPlainTextByKeys(
-        (props.theme && props.theme) || defaultTheme.blocker
+        (props.theme && props.theme) || defaultTheme.wrapper
     );
 
     return <Elem {...theme} {...props} />
-}
+};
 
-export default Blocker;
+export default Panel;

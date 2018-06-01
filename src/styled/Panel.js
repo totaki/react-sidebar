@@ -26,7 +26,7 @@ const Elem = styled.div`
     width: ${props => props.width};
     background-color: ${props => props.backgroundColor};
     box-sizing: border-box;
-    padding: ${props => props.padding};
+    overflow-y: auto;
 
     ${props => getPositionByLocation(props.location)}
 `;

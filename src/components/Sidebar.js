@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import Blocker from '../styled/Blocker';
 import Panel from '../styled/Panel';
-import CloseButton from '../styled/CloseButton';
+import Wrapper from '../styled/Wrapper';
 
 class Sidebar extends Component {
     constructor(props) {
@@ -26,12 +26,12 @@ class Sidebar extends Component {
 
         if (active) {
             return (
-                <Blocker onClick={this.closeSidebar}>
-                    <Panel onClick={e => e.stopPropagation()}>
-                        <CloseButton onClick={this.closeSidebar}>Close</CloseButton>
+                <Wrapper>
+                    <Blocker onClick={this.closeSidebar} />
+                    <Panel>
                         {this.props.children}
                     </Panel>
-                </Blocker>
+                </Wrapper>
             );
         } else {
             return (null);
