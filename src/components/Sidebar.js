@@ -10,41 +10,31 @@ class Sidebar extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            active: this.props.active 
-        };
-
-        this.closeSidebar = this.closeSidebar.bind(this);
-    }
-
-    closeSidebar(e) {
-        this.setState({ ...this.state, active: false });
+        this.bodyOverflowOriginal = document.body.style.overflow;
     }
 
     render() {
-        const { active } = this.state;
+        if (this.props.active) {
+            document.body.style.overflow = 'hidden';
 
-        if (active) {
             return (
                 <Wrapper>
-                    <Blocker onClick={this.closeSidebar} />
+                    <Blocker onClick={this.props.onClose} onTouchMove={e => e.preventDefault()}/>
                     <Panel>
                         {this.props.children}
                     </Panel>
                 </Wrapper>
             );
         } else {
+            document.body.style.overflow = this.bodyOverflowOriginal;
             return (null);
         }
     }
 }
 
 Sidebar.propTypes = {
-    active: PropTypes.bool
-};
-
-Sidebar.defaultProps = {
-    active: false
+    active: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired
 };
 
 export default Sidebar;
