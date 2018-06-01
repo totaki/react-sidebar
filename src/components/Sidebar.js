@@ -13,6 +13,10 @@ class Sidebar extends Component {
         this.bodyOverflowOriginal = document.body.style.overflow;
     }
 
+    componentWillUnmount() {
+        document.body.style.overflow = this.bodyOverflowOriginal;
+    }
+
     render() {
         if (this.props.active) {
             document.body.style.overflow = 'hidden';
