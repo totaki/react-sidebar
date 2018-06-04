@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { getThemeAsPlainTextByKeys } from '../utils';
+import { getThemeByKeys } from '../utils';
 import defaultTheme from '../theme/defaultTheme';
 
 const Elem = styled.div`
@@ -14,7 +14,7 @@ const Elem = styled.div`
 `;
 
 const Blocker = props => {
-    const theme = getThemeAsPlainTextByKeys(
+    const theme = getThemeByKeys(
         (props.theme && props.theme) || defaultTheme.blocker
     );
 

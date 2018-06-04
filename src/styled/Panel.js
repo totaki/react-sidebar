@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { getThemeAsPlainTextByKeys } from '../utils';
+import { getThemeByKeys } from '../utils';
 import defaultTheme from '../theme/defaultTheme';
 
 function getPositionByLocation(location) {
@@ -32,7 +32,7 @@ const Elem = styled.div`
 `;
 
 const Panel = props => {
-    const theme = getThemeAsPlainTextByKeys(
+    const theme = getThemeByKeys(
         (props.theme && props.theme) || defaultTheme.panel
     );
 
