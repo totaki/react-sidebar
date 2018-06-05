@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar Should not renders if not active 1`] = `""`;
+
+exports[`Sidebar Should renders if active 1`] = `
+<Panel>
+  <Blocker
+    onClick={[Function]}
+  />
+  <Panel />
+</Panel>
+`;
