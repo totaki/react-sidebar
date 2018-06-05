@@ -3,6 +3,14 @@ import { render } from 'react-dom';
 
 import Sidebar from '../../src';
 
+const sidebarTheme = {
+    panel: {
+        width: "500px",
+        backgroundColor: '#FFFFFF',
+        location: 'right'
+    }
+}
+
 class Demo extends Component {
     constructor(props) {
         super(props);
@@ -26,7 +34,11 @@ class Demo extends Component {
             <div>
                 <h1>react-sidebar Demo</h1>
                 <button onClick={this.handleShowSidebar}>Show sidebar</button>
-                <Sidebar active={this.state.sidebarActive} onClose={this.handleCloseSidebar}>
+                <Sidebar 
+                    active={this.state.sidebarActive}
+                    onClose={this.handleCloseSidebar}
+                    theme={sidebarTheme}
+                >
                     Sidebar content
                     <p>Tempor sint adipisicing aliquip fugiat quis eu qui cillum nisi cillum. Ad ad amet aliquip mollit ut eu occaecat deserunt ullamco officia duis amet. Cupidatat reprehenderit voluptate mollit sit sunt sint id proident sunt ullamco cillum nostrud id proident. Est elit do commodo dolore sit. Et Lorem tempor ex eu sunt mollit magna aliqua consequat pariatur ullamco Lorem ullamco. Incididunt in excepteur est in aute qui commodo exercitation esse.</p>
                     <p>Tempor sint adipisicing aliquip fugiat quis eu qui cillum nisi cillum. Ad ad amet aliquip mollit ut eu occaecat deserunt ullamco officia duis amet. Cupidatat reprehenderit voluptate mollit sit sunt sint id proident sunt ullamco cillum nostrud id proident. Est elit do commodo dolore sit. Et Lorem tempor ex eu sunt mollit magna aliqua consequat pariatur ullamco Lorem ullamco. Incididunt in excepteur est in aute qui commodo exercitation esse.</p>

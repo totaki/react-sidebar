@@ -15,7 +15,7 @@ const Elem = styled.div`
 
 const Blocker = props => {
     const theme = getThemeByKeys(
-        (props.theme && props.theme) || defaultTheme.blocker
+        (props.theme && props.theme.blocker) || defaultTheme.blocker
     );
 
     return <Elem {...theme} {...props} />

@@ -26,6 +26,7 @@ onSidebarClose() {
 
 | PropName | Description | Example |
 |---|---|---|
+| theme: object | Theme object | <Sidebar theme={myTheme}/> |
 | active: Boolean | Sidebar activity. Is Required. | <Sidebar active={true} .../> |
 | onClose: Function | Callback for change container state if blocker clicked. Is Required. | <Sidebar onClose={onClose} .../> |
 
