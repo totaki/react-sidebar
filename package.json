@@ -1,7 +1,7 @@
 {
-  "name": "react-sidebar",
+  "name": "@crpt/react-sidebar",
   "version": "1.0.0",
-  "description": "react-sidebar React component",
+  "description": "React sidebar component",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -56,7 +56,10 @@
     "react-dom": "^16.4.0",
     "react-test-renderer": "^16.4.0"
   },
-  "author": "",
+  "contributors": [
+    "Ivan Oshepkov",
+    "Nikita Solomennikov"
+  ],
   "homepage": "https://github.com/crptteam/react-sidebar",
   "license": "MIT",
   "repository": "https://github.com/crptteam/react-sidebar",
