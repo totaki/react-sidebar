@@ -18,13 +18,15 @@ class Sidebar extends Component {
     }
 
     render() {
-        if (this.props.active) {
+        const { active, theme } = this.props;
+
+        if (active) {
             document.body.style.overflow = 'hidden';
 
             return (
-                <Wrapper>
-                    <Blocker onClick={this.props.onClose}/>
-                    <Panel>
+                <Wrapper theme={theme}>
+                    <Blocker onClick={this.props.onClose} theme={theme}/>
+                    <Panel theme={theme}>
                         {this.props.children}
                     </Panel>
                 </Wrapper>
@@ -37,6 +39,7 @@ class Sidebar extends Component {
 }
 
 Sidebar.propTypes = {
+    theme: PropTypes.object,
     active: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired
 };

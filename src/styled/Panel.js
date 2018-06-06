@@ -33,7 +33,7 @@ const Elem = styled.div`
 
 const Panel = props => {
     const theme = getThemeByKeys(
-        (props.theme && props.theme) || defaultTheme.panel
+        (props.theme && props.theme.panel) || defaultTheme.panel
     );
 
     return <Elem {...theme} {...props} />

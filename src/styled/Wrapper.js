@@ -13,12 +13,12 @@ const Elem = styled.div`
     z-index: ${props => props.zIndex}
 `;
 
-const Panel = props => {
+const Wrapper = props => {
     const theme = getThemeByKeys(
-        (props.theme && props.theme) || defaultTheme.wrapper
+        (props.theme && props.theme.wrapper) || defaultTheme.wrapper
     );
 
     return <Elem {...theme} {...props} />
 };
 
-export default Panel;
+export default Wrapper;

@@ -1,7 +1,7 @@
 {
   "name": "@crpt/react-sidebar",
-  "version": "1.0.0",
-  "description": "React sidebar component",
+  "version": "1.0.1",
+  "description": "react-sidebar React component",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
