@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { getThemeByKeys } from '../utils';
 import defaultTheme from '../theme/defaultTheme';
 
-function getPositionByLocation(location, width, props) {
+function getPositionByLocation({ location, width }) {
     switch(location) {
         case 'left':
             return `
@@ -37,7 +37,7 @@ const Elem = styled.div`
     overflow-y: auto;
     transition: 0.5s all;
 
-    ${props => getPositionByLocation(props.location, props.width, props)}
+    ${props => getPositionByLocation(props)}
 `;
 
 const Panel = props => {
