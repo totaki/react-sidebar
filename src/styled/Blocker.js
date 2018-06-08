@@ -10,7 +10,12 @@ const Elem = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: ${props => props.backgroundColor}
+    background-color: ${props => props.backgroundColor};
+    opacity: 0;
+
+    .active & {
+        opacity: 1;
+    }
 `;
 
 const Blocker = props => {

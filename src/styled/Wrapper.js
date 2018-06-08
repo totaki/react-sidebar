@@ -10,7 +10,13 @@ const Elem = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: ${props => props.zIndex}
+    z-index: ${props => props.zIndex};
+    visibility: hidden;
+    transition: visibility 0.1s;
+
+    &.active {
+        visibility: visible;
+    }
 `;
 
 const Wrapper = props => {
