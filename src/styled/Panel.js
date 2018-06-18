@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { getThemeByKeys } from '../utils';
-import defaultTheme from '../theme/defaultTheme';
+import { getThemeByKeys, innerMerge } from "../utils";
+import defaultTheme from "../theme/defaultTheme";
 
 function getPositionByLocation({ location, width }) {
-    switch(location) {
-        case 'left':
-            return `
+  switch (location) {
+    case "left":
+      return `
                 top: 0;
                 bottom: 0;
                 left: -${width};
@@ -16,8 +16,8 @@ function getPositionByLocation({ location, width }) {
                     left: 0;
                 }
             `;
-        default:
-            return `
+    default:
+      return `
                 top: 0;
                 bottom: 0;
                 right: -${width};
@@ -25,27 +25,31 @@ function getPositionByLocation({ location, width }) {
                 .active & {
                     right: 0;
                 }
-            `;        
-    }
+            `;
+  }
 }
 
 const Elem = styled.div`
-    position: absolute;
-    width: ${props => props.width};
-    background-color: ${props => props.backgroundColor};
-    box-sizing: border-box;
-    overflow-y: auto;
-    transition: 0.5s all;
+  position: absolute;
+  width: ${props => props.width};
+  background-color: ${props => props.backgroundColor};
+  box-sizing: border-box;
+  overflow-y: auto;
+  transition: 0.5s all;
 
-    ${props => getPositionByLocation(props)}
+  ${props => getPositionByLocation(props)};
 `;
 
 const Panel = props => {
-    const theme = getThemeByKeys(
-        (props.theme && props.theme.panel) || defaultTheme.panel
-    );
+  const merged = innerMerge(
+    {},
+    defaultTheme.Sidebar.panel,
+    (props.theme && props.theme.Sidebar && props.theme.Sidebar.panel) || {}
+  );
 
-    return <Elem {...theme} {...props} />
+  const theme = getThemeByKeys(merged);
+
+  return <Elem {...theme} {...props} />;
 };
 
 export default Panel;

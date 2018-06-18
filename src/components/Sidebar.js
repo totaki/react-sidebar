@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import {withTheme} from 'styled-components';
 
 import Blocker from '../styled/Blocker';
 import Panel from '../styled/Panel';
@@ -27,4 +27,4 @@ Sidebar.propTypes = {
     onClose: PropTypes.func.isRequired
 };
 
-export default Sidebar;
+export default withTheme(Sidebar);
