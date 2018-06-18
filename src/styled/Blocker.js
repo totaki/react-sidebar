@@ -19,6 +19,7 @@ const Elem = styled.div`
 `;
 
 const Blocker = props => {
+
   const merged = innerMerge(
     {},
     defaultTheme.Sidebar.blocker,
@@ -26,6 +27,7 @@ const Blocker = props => {
   );
 
   const theme = getThemeByKeys(merged);
+
 
   return <Elem {...theme} {...props} />;
 };

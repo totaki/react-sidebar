@@ -27,3 +27,4 @@ export function innerMerge(obj, ...others) {
 
   return obj;
 }
+

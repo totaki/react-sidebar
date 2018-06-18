@@ -20,6 +20,7 @@ const Elem = styled.div`
 `;
 
 const Wrapper = props => {
+
   const merged = innerMerge(
     {},
     defaultTheme.Sidebar.wrapper,

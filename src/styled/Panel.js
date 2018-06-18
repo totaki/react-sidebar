@@ -6,26 +6,22 @@ import defaultTheme from "../theme/defaultTheme";
 
 function getPositionByLocation({ location, width }) {
   switch (location) {
-    case "left":
-      return `
-                top: 0;
-                bottom: 0;
-                left: -${width};
 
-                .active & {
-                    left: 0;
-                }
-            `;
+    case 'left':
+      return `
+        top: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-${width});
+      `;
     default:
       return `
-                top: 0;
-                bottom: 0;
-                right: -${width};
+        top: 0;
+        bottom: 0;
+        right: 0;
+        transform: translateX(${width});
+      `;
 
-                .active & {
-                    right: 0;
-                }
-            `;
   }
 }
 
@@ -37,8 +33,13 @@ const Elem = styled.div`
   overflow-y: auto;
   transition: 0.5s all;
 
-  ${props => getPositionByLocation(props)};
+  ${props => getPositionByLocation(props)}
+
+  .active & {
+    transform: translateX(0);
+  }
 `;
+
 
 const Panel = props => {
   const merged = innerMerge(
@@ -50,6 +51,7 @@ const Panel = props => {
   const theme = getThemeByKeys(merged);
 
   return <Elem {...theme} {...props} />;
+
 };
 
 export default Panel;
