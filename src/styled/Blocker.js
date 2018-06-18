@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { getThemeByKeys } from '../utils';
-import defaultTheme from '../theme/defaultTheme';
+import { getThemeByKeys, innerMerge } from "../utils";
+import defaultTheme from "../theme/defaultTheme";
 
 const Elem = styled.div`
   position: absolute;
@@ -19,11 +19,17 @@ const Elem = styled.div`
 `;
 
 const Blocker = props => {
-  const theme = getThemeByKeys(
-    (props.theme && props.theme.blocker) || defaultTheme.blocker
+
+  const merged = innerMerge(
+    {},
+    defaultTheme.Sidebar.blocker,
+    (props.theme && props.theme.Sidebar && props.theme.Sidebar.blocker) || {}
   );
 
-  return <Elem {...theme} {...props} />
-}
+  const theme = getThemeByKeys(merged);
+
+
+  return <Elem {...theme} {...props} />;
+};
 
 export default Blocker;

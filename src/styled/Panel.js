@@ -1,11 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { getThemeByKeys } from '../utils';
-import defaultTheme from '../theme/defaultTheme';
+import { getThemeByKeys, innerMerge } from "../utils";
+import defaultTheme from "../theme/defaultTheme";
 
 function getPositionByLocation({ location, width }) {
   switch (location) {
+
     case 'left':
       return `
         top: 0;
@@ -20,6 +21,7 @@ function getPositionByLocation({ location, width }) {
         right: 0;
         transform: translateX(${width});
       `;
+
   }
 }
 
@@ -38,12 +40,18 @@ const Elem = styled.div`
   }
 `;
 
+
 const Panel = props => {
-  const theme = getThemeByKeys(
-    (props.theme && props.theme.panel) || defaultTheme.panel
+  const merged = innerMerge(
+    {},
+    defaultTheme.Sidebar.panel,
+    (props.theme && props.theme.Sidebar && props.theme.Sidebar.panel) || {}
   );
 
-  return <Elem {...theme} {...props} />
+  const theme = getThemeByKeys(merged);
+
+  return <Elem {...theme} {...props} />;
+
 };
 
 export default Panel;
