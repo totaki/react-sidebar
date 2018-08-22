@@ -5,11 +5,12 @@ import { getThemeByKeys, innerMerge } from "../utils";
 import defaultTheme from "../theme/defaultTheme";
 
 const Elem = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  width: 
+  ${props => props.theme && props.theme.Sidebar && props.theme.Sidebar.panel && props.theme.Sidebar.panel.width 
+    ? `calc(100% - ${props.theme.Sidebar.panel.width})`
+    : '100%'};
+  background: red;
+  opacity: 0.3;
   background-color: ${props => props.backgroundColor};
   opacity: 0;
 
