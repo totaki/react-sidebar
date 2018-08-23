@@ -5,6 +5,8 @@ import { getThemeByKeys, innerMerge } from "../utils";
 import defaultTheme from "../theme/defaultTheme";
 
 function getPositionByLocation({ location, width }) {
+  console.log('Location -> ', location);
+  console.log('width -> ', width);
   switch (location) {
 
     case 'left':
@@ -26,11 +28,11 @@ function getPositionByLocation({ location, width }) {
 }
 
 const Elem = styled.div`
-  position: absolute;
+  height: fit-content;
+  min-height: 100vh;
   width: ${props => props.width};
+  align-items: start;
   background-color: ${props => props.backgroundColor};
-  box-sizing: border-box;
-  overflow-y: auto;
   transition: 0.5s all;
 
   ${props => getPositionByLocation(props)}
@@ -39,7 +41,6 @@ const Elem = styled.div`
     transform: translateX(0);
   }
 `;
-
 
 const Panel = props => {
   const merged = innerMerge(

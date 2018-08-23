@@ -4,11 +4,13 @@ import { render } from 'react-dom';
 import Sidebar from '../../src';
 
 const sidebarTheme = {
-  panel: {
-    width: "500px",
-    backgroundColor: '#FFFFFF',
-    location: 'right'
-  }
+  Sidebar: {
+    panel: {
+      width: "500px",
+      backgroundColor: '#FFFFFF',
+      location: 'right',
+    },
+  },
 }
 
 class Demo extends Component {
