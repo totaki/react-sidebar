@@ -7,19 +7,13 @@ import Panel from '../styled/Panel';
 import Wrapper from '../styled/Wrapper';
 
 class Sidebar extends Component {
+  
   render() {
     const { active, theme } = this.props;
-    const { location } = theme && theme.Sidebar && theme.Sidebar.panel;
 
-    const leftSidePanel = (
+    const bothSidePanel = (
       <React.Fragment>
         <Panel theme={theme}>{this.props.children}</Panel>
-        <Blocker onClick={this.props.onClose} theme={theme} />
-      </React.Fragment>
-    );
-
-    const rightSidePanel = (
-      <React.Fragment>
         <Blocker onClick={this.props.onClose} theme={theme} />
         <Panel theme={theme}>{this.props.children}</Panel>
       </React.Fragment>
@@ -27,7 +21,7 @@ class Sidebar extends Component {
 
     return (
       <Wrapper className={active ? 'active' : ''} theme={theme}>
-        {location == 'left' ? leftSidePanel : rightSidePanel}
+        {bothSidePanel}
       </Wrapper>
     )
   }
