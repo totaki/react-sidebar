@@ -1,23 +1,171 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidebar Should not renders if not active 1`] = `
-<Wrapper
-  className=""
+<WithTheme(Sidebar)
+  active={false}
+  onClose={[MockFunction]}
+  theme={Object {}}
 >
-  <Blocker
-    onClick={[Function]}
-  />
-  <Panel />
-</Wrapper>
+  <Sidebar
+    active={false}
+    onClose={[MockFunction]}
+    theme={Object {}}
+  >
+    <Wrapper
+      className=""
+      theme={Object {}}
+    >
+      <Wrapper__Elem
+        className=""
+        theme={Object {}}
+        zIndex="1000"
+      >
+        <div
+          className="Wrapper__Elem-fzNQvA gdWFBF"
+        >
+          <Wrapper__InternalWrapper
+            className=""
+            theme={Object {}}
+            zIndex="1000"
+          >
+            <div
+              className="Wrapper__InternalWrapper-fmQvTc jcgCMe"
+            >
+              <Panel
+                theme={Object {}}
+              >
+                <Panel__Elem
+                  backgroundColor="#FFFFFF"
+                  location="right"
+                  theme={Object {}}
+                  width="300px"
+                >
+                  <div
+                    className="Panel__Elem-bkFPOF hNRjUH"
+                    width="300px"
+                  />
+                </Panel__Elem>
+              </Panel>
+              <Blocker
+                onClick={[MockFunction]}
+                theme={Object {}}
+              >
+                <Blocker__Elem
+                  backgroundColor="rgba(0, 0, 0, 0.5)"
+                  onClick={[MockFunction]}
+                  theme={Object {}}
+                >
+                  <div
+                    className="Blocker__Elem-gTtZSi eyRQVB"
+                    onClick={[MockFunction]}
+                  />
+                </Blocker__Elem>
+              </Blocker>
+              <Panel
+                theme={Object {}}
+              >
+                <Panel__Elem
+                  backgroundColor="#FFFFFF"
+                  location="right"
+                  theme={Object {}}
+                  width="300px"
+                >
+                  <div
+                    className="Panel__Elem-bkFPOF hNRjUH"
+                    width="300px"
+                  />
+                </Panel__Elem>
+              </Panel>
+            </div>
+          </Wrapper__InternalWrapper>
+        </div>
+      </Wrapper__Elem>
+    </Wrapper>
+  </Sidebar>
+</WithTheme(Sidebar)>
 `;
 
 exports[`Sidebar Should renders if active 1`] = `
-<Wrapper
-  className="active"
+<WithTheme(Sidebar)
+  active={true}
+  onClose={[MockFunction]}
+  theme={Object {}}
 >
-  <Blocker
-    onClick={[Function]}
-  />
-  <Panel />
-</Wrapper>
+  <Sidebar
+    active={true}
+    onClose={[MockFunction]}
+    theme={Object {}}
+  >
+    <Wrapper
+      className="active"
+      theme={Object {}}
+    >
+      <Wrapper__Elem
+        className="active"
+        theme={Object {}}
+        zIndex="1000"
+      >
+        <div
+          className="active Wrapper__Elem-fzNQvA gdWFBF"
+        >
+          <Wrapper__InternalWrapper
+            className="active"
+            theme={Object {}}
+            zIndex="1000"
+          >
+            <div
+              className="active Wrapper__InternalWrapper-fmQvTc jcgCMe"
+            >
+              <Panel
+                theme={Object {}}
+              >
+                <Panel__Elem
+                  backgroundColor="#FFFFFF"
+                  location="right"
+                  theme={Object {}}
+                  width="300px"
+                >
+                  <div
+                    className="Panel__Elem-bkFPOF hNRjUH"
+                    width="300px"
+                  />
+                </Panel__Elem>
+              </Panel>
+              <Blocker
+                onClick={[MockFunction]}
+                theme={Object {}}
+              >
+                <Blocker__Elem
+                  backgroundColor="rgba(0, 0, 0, 0.5)"
+                  onClick={[MockFunction]}
+                  theme={Object {}}
+                >
+                  <div
+                    className="Blocker__Elem-gTtZSi eyRQVB"
+                    onClick={[MockFunction]}
+                  />
+                </Blocker__Elem>
+              </Blocker>
+              <Panel
+                theme={Object {}}
+              >
+                <Panel__Elem
+                  backgroundColor="#FFFFFF"
+                  location="right"
+                  theme={Object {}}
+                  width="300px"
+                >
+                  <div
+                    className="Panel__Elem-bkFPOF hNRjUH"
+                    width="300px"
+                  />
+                </Panel__Elem>
+              </Panel>
+            </div>
+          </Wrapper__InternalWrapper>
+        </div>
+      </Wrapper__Elem>
+    </Wrapper>
+  </Sidebar>
+</WithTheme(Sidebar)>
 `;

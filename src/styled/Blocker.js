@@ -1,19 +1,16 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
+import { get } from 'lodash';
 
-import { getThemeByKeys, innerMerge } from "../utils";
-import defaultTheme from "../theme/defaultTheme";
+import { getThemeByKeys, innerMerge } from '../utils';
+import defaultTheme from '../theme/defaultTheme';
 
 const Elem = styled.div`
-  width: 
-  ${props => props.theme && props.theme.Sidebar && props.theme.Sidebar.panel && props.theme.Sidebar.panel.width 
-    ? `calc(100% - ${props.theme.Sidebar.panel.width})`
-    : '100%'};
-  background: red;
+  width: 100vw;
   opacity: 0.3;
-  background-color: ${props => props.backgroundColor};
+  background-color: ${props => get(props, 'backgroundColor', 'black')};
   opacity: 0;
-
+  transition: opacity 1s;
   .active & {
     opacity: 1;
   }

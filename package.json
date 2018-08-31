@@ -1,6 +1,6 @@
 {
   "name": "@crpt/react-sidebar",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "react-sidebar React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -23,6 +23,7 @@
     "access": "public"
   },
   "dependencies": {
+    "lodash": "^4.17.10",
     "styled-components": "1.4.6 - 3"
   },
   "peerDependencies": {
