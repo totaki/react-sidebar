@@ -12,6 +12,7 @@ const Elem = styled.div`
   width: ${props => get(props, 'width', '1000px')};
   align-items: start;
   background-color: ${props => get(props, 'backgroundColor', 'black')};
+  box-shadow: ${props => get(props, 'boxShadow', '')};
 `;
 
 const Panel = props => {
