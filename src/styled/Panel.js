@@ -11,6 +11,7 @@ const Elem = styled.div`
   min-height: 100vh;
   width: ${props => get(props, 'width', '1000px')};
   align-items: start;
+  overflow: hidden;
   background-color: ${props => get(props, 'backgroundColor', 'black')};
   box-shadow: ${props => get(props, 'boxShadow', '')};
 `;
