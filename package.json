@@ -1,5 +1,5 @@
 {
-  "name": "@crpt/react-sidebar",
+  "name": "@crpt-osinit/react-sidebar",
   "version": "1.0.9",
   "description": "react-sidebar React component",
   "main": "lib/index.js",
