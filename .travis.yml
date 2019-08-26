@@ -6,7 +6,7 @@ node_js:
 
 before_install:
   - npm install codecov.io coveralls
-  - npm i -g makeshift && makeshift -s @crpt -r registry.npmjs.org
+  - npm i -g makeshift && makeshift -s @crpt-osinit -r registry.npmjs.org
 
 after_success:
   - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
